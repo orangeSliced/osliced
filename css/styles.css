@@ -1,0 +1,15 @@
+/*Styles for Prescription Tracker*/
+
+body{
+	background-color:#B8E1FF;
+}
+
+li{
+	list-style-type: none;
+}
+
+#errors{
+	font-weight: bold;
+	color:#FF0000;
+	font-style:italic;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Prescription Tracker - web application for mobile" />
+	<meta name="author" content="Marianne Sheldon" />
+	<meta name="keywords" content="prescription, tracker, medicine, medical, patient, records" />
+	<meta name="robots" content="index, follow" />
+	
+	<!-- <meta name="viewport" content="width=device-width" /> -->
+	<meta name="viewport" content="width=320" />
+	<meta name="HandheldFriendly" content="true"/> 
+	<meta name="MobileOptimized" content="320"/>
+	   
+	<title>Prescription Tracker - Add an Item</title>
+	<link href="css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<h1>Add a Prescription</h1>
+	
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="additem.html" class="addPrescriptionNav">Add a new Prescription</a></li>
+		</ul>	
+	</nav>	
+	
+	
+	<!-- ***************************************************************************** Form to add prescription -->
+	
+	<form action="#" method="post" id="addPform" />
+		<fieldset id="contactFieldset">
+			<legend>Add a Prescription</legend>
+			<!-- <span>* fields are required.</span> -->
+			<ul id="errors"></ul>
+			<ul id="pDetails">
+				<li><label for="drug">Drug Name: </label><input type="text" id="drug" /></li>
+				<li><label for="dosage">Dosage: </label><input type="text" id="dosage" />
+				<span id="units"></span>
+				<!-- <select id="units">
+									<option value="--select-units--">--Select Units--</option>
+									<option value="mg">mg</option>
+									<option value="mcg">mcg</option>
+									<option value="ml">ml</option>
+									<option value="tsp">tsp</option>
+									<option value="tab">tab</option>
+									<option value="other">other (see notes)</option>
+								</select> -->
+				<br />
+				<li><label for="frequency">Frequency</label><br />
+					1<input type="range" min="1" max="10" step="1" value="1" id="freqAmnt" />10
+					
+					<select id="freqTime">
+						<option value="times per day">times per day</option>
+						<option value="times per hour">times per hour</option>
+						<option value="every four hours">every four hours</option>
+						<option value="as needed">as needed</option>
+						<option value="other">other (see notes)</option>
+					</select>
+					
+					</li>
+				
+				<li><label for="type">Type of prescription: </label>
+					<ul class="pType">
+						<li><input type="radio" id="one time" value="one time" name="type" class="drugType" /><label for="one time">One Time</label></li>
+						<li><input type="radio" id="ongoing" value="ongoing" name="type" class="drugType" /><label for="ongoing">Ongoing</label></li>
+					</ul>
+				</li>
+				<li><input type="checkbox" id="refill" value="Yes" class="checkbox" /><label for="refill">Set refill reminder?</label></li>
+				
+				<!-- <li><label for="date">Date Added</label><input type="date" id="date" /></li> -->
+				<li><label for="doctor">Prescribing Doctor: </label><input type="text" id="doctor" /></li>
+				<li><label for="docPhone">Doctor's Phone: </label><input type="text" id="docPhone" /></li>
+				<li><label for="instructions">Instructions: </label><textarea id="instructions"></textarea></li>
+				<li><label for="notes">Additional Notes: </label><textarea id="notes"></textarea></li>
+			</ul>
+			<input type="submit" value="Save Prescription" id="submit_addP" />
+		</fieldset>
+	
+	</form>
+	
+	<a href="#" id="clear">Clear Stored Data</a>
+	<a href="#" id="display">Display Stored Data</a>
+	
+	
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
